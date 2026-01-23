@@ -20,6 +20,6 @@ BIN_DIR   := bin
 # Clean utility
 clean:
 	rm -rf $(OBJ_DIR) $(BIN_DIR)
-	@echo "Build and Obj directories removed."
+	@echo "Bin and Obj directories removed."
 
 .PHONY: clean
