@@ -2,10 +2,22 @@
 
 This is a Simple fully functioning CLI Calculator.
 
-To test it, just copy the code and compile it to run on your OS.
+**macOS/Windows**
 
+Copy (src/calculator.c) and compile it to run on your OS.
+
+**Linux**
+
+If you're on Linux, you can just clone the repository with git and build.
+
+    - Building:
+
+    inside terminal run: make calculator
+
+    - Dependencies:
+
+    gcc
+    make
+    git
 
 **Thank You!**
-
-
-
