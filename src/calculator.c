@@ -87,26 +87,28 @@ int main (void)
 
 void sum ()
 {
-    float x;
-    printf("First number: ");
-    scanf("%f", & x);
-    float y;
-    printf("Second number: ");
-    scanf("%f", & y);
-    float z = x + y;
-    printf("Result: ", "%.2f", z);
+
+	float x;
+	printf("First number: ");
+	scanf("%f", & x);
+	float y;
+	printf("Second number: ");
+	scanf("%f", & y);
+	float z = x + y;
+	printf("Result: "), printf("%.2f", z);
 } 
 
 void sub ()
 {
-    float x;
-    printf("First number: ");
-    scanf("%f", & x);
-    float y;
-    printf("Second number: ");
-    scanf("%f", & y);
-    float z = x - y;
-    printf("Result: ", "%.2f", z);
+
+	float x;
+	printf("First number: ");
+	scanf("%f", & x);
+	float y;
+	printf("Second number: ");
+	scanf("%f", & y);
+	float z = x - y;
+	printf("Result: "), printf("%.2f", z);
 
 }
 
