@@ -20,15 +20,13 @@ int main (void)
 {
 	printf("Hi! I'm the calculator!\nDo you want to calculate? Y/N ", " ");
 	char confirmation;
-	scanf   ("%s", & confirmation);
+	scanf("%s", & confirmation);
 
 	if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
-	{
+		
 		printf("Alright, goodbye.\n");
-	}
     
-	while (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
-	{
+	while (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y') {
 
 		printf("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
 		char operation;
@@ -36,56 +34,48 @@ int main (void)
 	        scanf("%s", & operation);
 
 		if (operation == '1')
-		{
+
 			// runs sum function
 			sum();
-		}
 
 		else if (operation == '2')
-		{
+
 			// runs sub function
 			sub();
-		}	
-
 
 		else if (operation == '3')
-		{
+
 			// runs multiplication function
 			multi();
-		}
 
 		else if (operation == '4')
-		{
+
 			// runs division function
 			div();
-	        }
 
 		else if (operation == '5')
-	        {
+
 		        // runs power function
 			power();
-		}
 
 	        else if (operation == '6')
-		{
+
 			// runs sqroot function
 			sqroot();
-		}
 
 		printf("\n");
 	        printf("Do you want to calculate more? Y/N ", " ");
 		scanf("%s", & confirmation);
         
-	        if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
-		{
+	        if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n') {
+			
 			printf("Alright, goodbye.\n");
 			break; // Exit program.
 		}
 
 	        if (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
-		{
+
 			continue; // Program keeps running.
-		}
 	}
 	
 	return 0;
@@ -97,26 +87,26 @@ int main (void)
 
 void sum ()
 {
-    float   x;
-    printf  ("First number: ");
-    scanf   ("%f", & x);
-    float   y;
-    printf  ("Second number: ");
-    scanf   ("%f", & y);
-    float   z = x + y;
-    printf  ("Result: "), printf    ("%.2f", z);
+    float x;
+    printf("First number: ");
+    scanf("%f", & x);
+    float y;
+    printf("Second number: ");
+    scanf("%f", & y);
+    float z = x + y;
+    printf("Result: ", "%.2f", z);
 } 
 
 void sub ()
 {
-    float   x;
-    printf  ("First number: ");
-    scanf   ("%f", & x);
-    float   y;
-    printf  ("Second number: ");
-    scanf   ("%f", & y);
-    float   z = x - y;
-    printf  ("Result: "), printf    ("%.2f", z);
+    float x;
+    printf("First number: ");
+    scanf("%f", & x);
+    float y;
+    printf("Second number: ");
+    scanf("%f", & y);
+    float z = x - y;
+    printf("Result: ", "%.2f", z);
 
 }
 
