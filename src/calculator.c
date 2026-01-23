@@ -7,86 +7,86 @@
 
 // Functions
 
-void sum    ();
-void sub    ();
-void multi  ();
-void div    ();
-void power  ();
+void sum ();
+void sub ();
+void multi ();
+void div ();
+void power ();
 void sqroot ();
 
 // -- Main --
 
 int main (void)
 {
-    printf  ("Hi! I'm the calculator!\nDo you want to calculate? Y/N ", " ");
-    char    confirmation;
-    scanf   ("%s", & confirmation);
+	printf("Hi! I'm the calculator!\nDo you want to calculate? Y/N ", " ");
+	charconfirmation;
+	scanf   ("%s", & confirmation);
 
-    if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
-    {
-        printf("Alright, goodbye.\n");
-    }
+	if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
+	{
+		printf("Alright, goodbye.\n");
+	}
     
-    while (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
-    {
+	while (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
+	{
 
-        printf  ("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
-        char    operation;
-        printf  ("Choose your operation number: ");
-        scanf   ("%s", & operation);
+		printf  ("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
+		char    operation;
+		printf  ("Choose your operation number: ");
+	        scanf   ("%s", & operation);
+
+		if (operation == '1')
+		{
+			// runs sum function
+			sum();
+		}
+
+		else if (operation == '2')
+		{
+			// runs sub function
+			sub();
+		}	
 
 
-        if (operation == '1')
-        {
-                // runs sum function
-                sum();
-        }
+		else if (operation == '3')
+		{
+			// runs multiplication function
+			multi();
+		}
 
-        else if (operation == '2')
-        {
-                // runs sub function
-                sub();
-        }
+		else if (operation == '4')
+		{
+			// runs division function
+			div();
+	        }
 
-        else if (operation == '3')
-        {
-                // runs multiplication function
-                multi();
-        }
+		else if (operation == '5')
+	        {
+		        // runs power function
+			power();
+		}
 
-        else if (operation == '4')
-        {
-                // runs division function
-                div();
-        }
+	        else if (operation == '6')
+		{
+			// runs sqroot function
+			sqroot();
+		}
 
-        else if (operation == '5')
-        {
-                // runs power function
-                power();
-        }
-
-        else if (operation == '6')
-        {
-                // runs sqroot function
-                sqroot();
-        }
-
-        printf  ("\n");
-        printf  ("Do you want to calculate more? Y/N ", " ");
-        scanf   ("%s", & confirmation);
+		printf  ("\n");
+	        printf  ("Do you want to calculate more? Y/N ", " ");
+		scanf   ("%s", & confirmation);
         
-        if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
-        {
-                printf  ("Alright, goodbye.\n");
-                break; // Exit program.
-        }
+	        if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
+		{
+			printf  ("Alright, goodbye.\n");
+			break; // Exit program.
+		}
 
-        if (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
-        {
-                continue; // Program keeps running.
-        }
-    }
+	        if (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
+		{
+			continue; // Program keeps running.
+		}
+	}
 
 }
 
@@ -94,7 +94,7 @@ int main (void)
 
 // Functions Logic
 
-void sum    ()
+void sum ()
 {
     float   x;
     printf  ("First number: ");
@@ -106,7 +106,7 @@ void sum    ()
     printf  ("Result: "), printf    ("%.2f", z);
 } 
 
-void sub    ()
+void sub ()
 {
     float   x;
     printf  ("First number: ");
@@ -119,7 +119,7 @@ void sub    ()
 
 }
 
-void multi  ()
+void multi ()
 {
     float   x;
     printf  ("First number: ");
@@ -131,7 +131,7 @@ void multi  ()
     printf  ("Result: "), printf    ("%.2f", z);
 }
 
-void div    ()
+void div ()
 {
     float   x;
     printf  ("First number: ");
@@ -143,7 +143,7 @@ void div    ()
     printf  ("Result: "), printf    ("%.2f", z);
 }
 
-void power  ()
+void power ()
 {
     float   x;
     printf  ("base number: ");
