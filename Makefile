@@ -7,8 +7,8 @@ SRC_DIR   := src
 OBJ_DIR   := obj
 BIN_DIR   := bin
 
-# This magic rule allows you to run 'make program'
-# It looks for src/program.c, creates obj/program.o, and builds build/program
+# This simple script is to simply type in terminal: make "program".
+# It looks for source code (src/program.c), creates objects (obj/program.o) and binary (bin/program).
 %: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR) $(BIN_DIR)
 	@echo "Compiling $<..."
