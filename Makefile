@@ -1,7 +1,7 @@
 # Compiler and Flags
 CC      := gcc
 CFLAGS  := -Wall -Wextra -g
-
+LDFLAGS := -lm
 # Directories
 SRC_DIR   := src
 OBJ_DIR   := obj
@@ -14,7 +14,7 @@ BIN_DIR   := bin
 	@echo "Compiling $<..."
 	$(CC) $(CFLAGS) -c $< -o $(OBJ_DIR)/$*.o
 	@echo "Linking $@..."
-	$(CC) $(OBJ_DIR)/$*.o -o $(BIN_DIR)/$@
+	$(CC) $(OBJ_DIR)/$*.o -o $(BIN_DIR)/$@ $(LDFLAGS)
 	@echo "Done! Executable is in $(BIN_DIR)/$@"
 
 # Clean utility
