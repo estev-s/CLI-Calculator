@@ -19,7 +19,7 @@ void sqroot ();
 int main (void)
 {
 	printf("Hi! I'm the calculator!\nDo you want to calculate? Y/N ", " ");
-	charconfirmation;
+	char confirmation;
 	scanf   ("%s", & confirmation);
 
 	if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
@@ -30,10 +30,10 @@ int main (void)
 	while (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
 	{
 
-		printf  ("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
-		char    operation;
-		printf  ("Choose your operation number: ");
-	        scanf   ("%s", & operation);
+		printf("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
+		char operation;
+		printf("Choose your operation number: ");
+	        scanf("%s", & operation);
 
 		if (operation == '1')
 		{
@@ -72,13 +72,13 @@ int main (void)
 			sqroot();
 		}
 
-		printf  ("\n");
-	        printf  ("Do you want to calculate more? Y/N ", " ");
-		scanf   ("%s", & confirmation);
+		printf("\n");
+	        printf("Do you want to calculate more? Y/N ", " ");
+		scanf("%s", & confirmation);
         
 	        if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
 		{
-			printf  ("Alright, goodbye.\n");
+			printf("Alright, goodbye.\n");
 			break; // Exit program.
 		}
 
@@ -87,7 +87,8 @@ int main (void)
 			continue; // Program keeps running.
 		}
 	}
-
+	
+	return 0;
 }
 
 // --- xx ---
