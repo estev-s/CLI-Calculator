@@ -1,4 +1,5 @@
-/* My Calculator in C language */
+/* My Calculator in C language 
+ * Utilizing the linux kernel coding style*/
 
 // Libraries
 #include <stdio.h>
@@ -31,7 +32,7 @@ int main (void)
 		printf("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
 		char operation;
 		printf("Choose your operation number: ");
-	        scanf("%s", & operation);
+		scanf("%s", & operation);
 
 		if (operation == '1')
 			// runs sum function
@@ -56,8 +57,9 @@ int main (void)
 
 			// runs power function
 			power();
+		
+		else if (operation == '6')
 
-	        else if (operation == '6')
 			// runs sqroot function
 			sqroot();
 		
