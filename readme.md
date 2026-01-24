@@ -1,6 +1,6 @@
 ﻿When learning a language for the first time I always like to start with a calculator to get a hang of the basics and syntax.
 
-This is a Simple fully functioning CLI Calculator.
+This is a simple CLI Calculator.
 
 **macOS/Windows**
 
@@ -12,12 +12,12 @@ If you're on Linux, you can just clone the repository with git and build.
 
     - Building:
 
-    inside terminal run: make calculator
+        inside terminal run: make calculator
 
     - Dependencies:
 
-    gcc
-    make
-    git
+        gcc
+        make
+        git
 
 **Thank You!**
