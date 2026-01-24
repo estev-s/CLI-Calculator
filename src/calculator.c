@@ -18,7 +18,7 @@ void sqroot (void);
 
 int main (void)
 {
-	printf("Hi! I'm the calculator!\nDo you want to calculate? Y/N ", " ");
+	printf("Hi! I'm the calculator!\nDo you want to calculate? (Y/N) ");
 	char confirmation;
 	scanf("%s", & confirmation);
 
@@ -64,7 +64,7 @@ int main (void)
 			sqroot();
 
 		printf("\n");
-	        printf("Do you want to calculate more? Y/N ", " ");
+	        printf("Do you want to calculate more? (Y/N) ");
 		scanf("%s", & confirmation);
         
 	        if (confirmation == 'N' || confirmation == 'n') {
