@@ -18,16 +18,16 @@ void sqroot ();
 
 int main (void)
 {
-    printf  ("Hi! I'm the calculator!\nDo you want to calculate? Y/N ", " ");
+    printf  ("Hi! I'm the calculator!\nDo you want to calculate? (Y/N)");
     char    confirmation;
     scanf   ("%s", & confirmation);
 
-    if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
+    if (confirmation == 'N' || confirmation == 'n')
     {
         printf("Alright, goodbye.\n");
     }
     
-    while (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
+    while (confirmation == 'Y' || confirmation == 'y')
     {
 
         printf  ("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
@@ -73,16 +73,16 @@ int main (void)
         }
 
         printf  ("\n");
-        printf  ("Do you want to calculate more? Y/N ", " ");
+        printf  ("Do you want to calculate more? (Y/N) ");
         scanf   ("%s", & confirmation);
         
-        if (confirmation == 'N' || confirmation == 'No' ||  confirmation == 'no' || confirmation == 'n')
+        if (confirmation == 'N' || confirmation == 'n')
         {
                 printf  ("Alright, goodbye.\n");
                 break; // Exit program.
         }
 
-        if (confirmation == 'Y' || confirmation == 'Yes' ||  confirmation == 'yes' || confirmation == 'y')
+        if (confirmation == 'Y' || confirmation == 'y')
         {
                 continue; // Program keeps running.
         }
