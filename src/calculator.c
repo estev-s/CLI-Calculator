@@ -1,4 +1,19 @@
-/* My Calculator in C language */
+/****************************************************************
+Title:
+	My Calculator in C language.
+
+About:
+	CLI calculator project using standard C libraries, 
+	therefore, can compile and run on any OS
+	with a C compiler.
+
+License:
+
+	The Unlicense - please refer to <https://unlicense.org>
+Author: 
+	Estevão Salles <mail.estevao.s@gmail.com>
+ 
+ ****************************************************************/
 
 // Libraries
 #include <stdio.h>
