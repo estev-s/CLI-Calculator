@@ -1,6 +1,20 @@
-/* My Calculator in C language 
- * Utilizing the linux kernel coding style*/
+/****************************************************************
+Title:
+	My calculator in C language with the Linux kernel coding
+	style.
 
+About:
+	CLI calculator project using standard C libraries, 
+	therefore, can compile and run on any OS
+	with a C compiler.
+
+License:
+	The Unlicense - please refer to <https://unlicense.org>
+Author: 
+	Estevão Salles <mail.estevao.s@gmail.com>
+
+*****************************************************************/ 
+ 
 // Libraries
 #include <stdio.h>
 #include <stdint.h>
@@ -8,16 +22,16 @@
 
 // Functions
 
-void sum (void);
-void sub (void);
-void multi (void);
-void div (void);
-void power (void);
-void sqroot (void);
+void sum(void);
+void sub(void);
+void multi(void);
+void div(void);
+void power(void);
+void sqroot(void);
 
-// -- Main --
 
-int main (void)
+// --- Main ---
+int main(void)
 {
 	printf("Hi! I'm the calculator!\nDo you want to calculate? (Y/N) ");
 	char confirmation;
@@ -80,12 +94,12 @@ int main (void)
 	
 	return 0;
 }
+// --- Main End ---
 
-// --- xx ---
 
-// Functions Logic
+// Functions Logic:
 
-void sum (void)
+void sum(void)
 {
 
 	float x;
@@ -98,7 +112,7 @@ void sum (void)
 	printf("Result: "), printf("%.2f", z);
 }
 
-void sub (void)
+void sub(void)
 {
 
 	float x;
@@ -111,7 +125,7 @@ void sub (void)
 	printf("Result: "), printf("%.2f", z);
 }
 
-void multi (void)
+void multi(void)
 {
 	float x;
 	printf("First number: ");
@@ -123,7 +137,7 @@ void multi (void)
 	printf("Result: "), printf("%.2f", z);
 }
 
-void div (void)
+void div(void)
 {
 	float x;
 	printf("First number: ");
@@ -135,7 +149,7 @@ void div (void)
 	printf("Result: "), printf("%.2f", z);
 }
 
-void power (void)
+void power(void)
 {
 	float x;
 	printf("base number: ");
@@ -147,7 +161,7 @@ void power (void)
 	printf("Result: "), printf("%.2f", z);
 }
 
-void sqroot (void)
+void sqroot(void)
 {
 	float x;
 	printf("Base number: ");
