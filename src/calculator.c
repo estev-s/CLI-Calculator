@@ -20,8 +20,8 @@ Author:
 #include <stdint.h>
 #include <math.h>
 
-// Functions
 
+// Functions
 void sum    ();
 void sub    ();
 void multi  ();
@@ -29,8 +29,8 @@ void div    ();
 void power  ();
 void sqroot ();
 
-// -- Main --
 
+// --- Main ---
 int main (void)
 {
     printf  ("Hi! I'm the calculator!\nDo you want to calculate? (Y/N)");
@@ -94,7 +94,7 @@ int main (void)
         if (confirmation == 'N' || confirmation == 'n')
         {
                 printf  ("Alright, goodbye.\n");
-                break; // Exit program.
+                break; // Break loop then exit program.
         }
 
         if (confirmation == 'Y' || confirmation == 'y')
@@ -102,13 +102,13 @@ int main (void)
                 continue; // Program keeps running.
         }
     }
-
+    return 0;
 }
+// --- Main End ---
 
-// --- xx ---
 
-// Functions Logic
 
+// Functions Logic:
 void sum    ()
 {
     float   x;
