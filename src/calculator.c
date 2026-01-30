@@ -84,7 +84,7 @@ int main(void)
 		if (confirmation == 'N' || confirmation == 'n') {
 			
 			printf("Alright, goodbye.\n");
-			break; // Exit program.
+			break; // Break loop and exit program.
 		}
 		
 		if (confirmation == 'Y' || confirmation == 'y')
@@ -102,70 +102,65 @@ int main(void)
 void sum(void)
 {
 
-	float x;
+	float x, y, z;
 	printf("First number: ");
 	scanf("%f", & x);
-	float y;
 	printf("Second number: ");
 	scanf("%f", & y);
-	float z = x + y;
+	z = x + y;
 	printf("Result: "), printf("%.2f", z);
 }
 
 void sub(void)
 {
 
-	float x;
+	float x, y, z;
 	printf("First number: ");
 	scanf("%f", & x);
-	float y;
 	printf("Second number: ");
 	scanf("%f", & y);
-	float z = x - y;
+	z = x - y;
 	printf("Result: "), printf("%.2f", z);
 }
 
 void multi(void)
 {
-	float x;
+	float x, y, z;
 	printf("First number: ");
 	scanf("%f", & x);
-	float y;
 	printf("Second number: ");
 	scanf("%f", & y);
-	float z = x * y;
+	z = x * y;
 	printf("Result: "), printf("%.2f", z);
 }
 
 void div(void)
 {
-	float x;
+	float x, y, z;
 	printf("First number: ");
 	scanf("%f", & x);
-	float y;
 	printf("Second number: ");
 	scanf("%f", & y);
-	float z = x / y;
+	z = x / y;
 	printf("Result: "), printf("%.2f", z);
 }
 
 void power(void)
 {
-	float x;
+	float x, y, z;
 	printf("base number: ");
 	scanf("%f", & x);
-	float y;
 	printf("Exponential number: ");
 	scanf("%f", & y);
-	float z = pow(x, y);
+	z = pow(x, y);
 	printf("Result: "), printf("%.2f", z);
 }
 
 void sqroot(void)
 {
-	float x;
+	float x, y;
 	printf("Base number: ");
 	scanf("%f", & x);
-	float z = sqrtf(x);
-	printf("Result: "), printf("%.2f", z);
+	y = sqrtf(x);
+	printf("Result: "), printf("%.2f", y);
 }
