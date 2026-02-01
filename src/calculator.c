@@ -15,13 +15,13 @@ Author:
 
 *****************************************************************/ 
  
-// Libraries
+// Libraries/Headers
 #include <stdio.h>
 #include <stdint.h>
 #include <math.h>
 
-// Functions
 
+// Functions
 void sum(void);
 void sub(void);
 void multi(void);
@@ -35,7 +35,7 @@ int main(void)
 {
 	printf("Hi! I'm the calculator!\nDo you want to calculate? (Y/N) ");
 	char confirmation;
-	scanf("%s", & confirmation);
+	scanf("%s", &confirmation);
 
 	if (confirmation == 'N' || confirmation == 'n')
 
@@ -44,42 +44,46 @@ int main(void)
 	while (confirmation == 'Y' || confirmation == 'y') {
 
 		printf("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
-		char operation;
+		int operation;
 		printf("Choose your operation number: ");
-		scanf("%s", & operation);
+		scanf("%i", &operation);
 
-		if (operation == '1')
-			// runs sum function
-			sum();
-
-		else if (operation == '2')
-
-			// runs sub function
-			sub();
-
-		else if (operation == '3')
-
-			// runs multiplication function
-			multi();
-
-		else if (operation == '4')
-
-			// runs division function
-			div();
-
-		else if (operation == '5')
-
-			// runs power function
-			power();
+		switch (operation) {
 		
-		else if (operation == '6')
+			case 1:
+				// runs sum function
+				sum();
+				break;
 
-			// runs sqroot function
-			sqroot();
+			case 2:
+				// runs sub function
+				sub();
+				break;
+			
+			case 3:
+				// runs multiplication function
+				multi();
+				break;
+
+			case 4:
+				// runs division function
+				div();
+				break;
+
+			case 5:
+				// runs power function
+				power();
+				break;
+
+			case 6:
+				// runs sqroot function
+				sqroot();
+				break;
+		}
 		
 		printf("\n");
 		printf("Do you want to calculate more? (Y/N) ");
-		scanf("%s", & confirmation);
+		scanf("%s", &confirmation);
 		
 		if (confirmation == 'N' || confirmation == 'n') {
 			
@@ -87,9 +91,10 @@ int main(void)
 			break; // Break loop and exit program.
 		}
 		
-		if (confirmation == 'Y' || confirmation == 'y')
-			
+		if (confirmation == 'Y' || confirmation == 'y') {
+			printf("\n");	
 			continue; // Program keeps running.
+		}
 	}
 	
 	return 0;
@@ -104,11 +109,12 @@ void sum(void)
 
 	float x, y, z;
 	printf("First number: ");
-	scanf("%f", & x);
+	scanf("%f", &x);
 	printf("Second number: ");
-	scanf("%f", & y);
+	scanf("%f", &y);
 	z = x + y;
 	printf("Result: "), printf("%.2f", z);
+
 }
 
 void sub(void)
@@ -116,9 +122,9 @@ void sub(void)
 
 	float x, y, z;
 	printf("First number: ");
-	scanf("%f", & x);
+	scanf("%f", &x);
 	printf("Second number: ");
-	scanf("%f", & y);
+	scanf("%f", &y);
 	z = x - y;
 	printf("Result: "), printf("%.2f", z);
 }
@@ -127,9 +133,9 @@ void multi(void)
 {
 	float x, y, z;
 	printf("First number: ");
-	scanf("%f", & x);
+	scanf("%f", &x);
 	printf("Second number: ");
-	scanf("%f", & y);
+	scanf("%f", &y);
 	z = x * y;
 	printf("Result: "), printf("%.2f", z);
 }
@@ -138,9 +144,9 @@ void div(void)
 {
 	float x, y, z;
 	printf("First number: ");
-	scanf("%f", & x);
+	scanf("%f", &x);
 	printf("Second number: ");
-	scanf("%f", & y);
+	scanf("%f", &y);
 	z = x / y;
 	printf("Result: "), printf("%.2f", z);
 }
@@ -149,9 +155,9 @@ void power(void)
 {
 	float x, y, z;
 	printf("base number: ");
-	scanf("%f", & x);
+	scanf("%f", &x);
 	printf("Exponential number: ");
-	scanf("%f", & y);
+	scanf("%f", &y);
 	z = pow(x, y);
 	printf("Result: "), printf("%.2f", z);
 }
@@ -160,7 +166,7 @@ void sqroot(void)
 {
 	float x, y;
 	printf("Base number: ");
-	scanf("%f", & x);
+	scanf("%f", &x);
 	y = sqrtf(x);
 	printf("Result: "), printf("%.2f", y);
 }
