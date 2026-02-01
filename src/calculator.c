@@ -49,36 +49,36 @@ int main(void)
 		scanf("%i", &operation);
 
 		switch (operation) {
-		
-			case 1:
-				// runs sum function
-				sum();
-				break;
 
-			case 2:
-				// runs sub function
-				sub();
-				break;
+		case 1:
+			// runs sum function
+			sum();
+			break;
+
+		case 2:
+			// runs sub function
+			sub();
+			break;
 			
-			case 3:
-				// runs multiplication function
-				multi();
-				break;
+		case 3:
+			// runs multiplication function
+			multi();
+			break;
 
-			case 4:
-				// runs division function
-				div();
-				break;
+		case 4:
+			// runs division function
+			div();
+			break;
 
-			case 5:
-				// runs power function
-				power();
-				break;
+		case 5:
+			// runs power function				
+			power();
+			break;
 
-			case 6:
-				// runs sqroot function
-				sqroot();
-				break;
+		case 6:
+			// runs sqroot function
+			sqroot();
+			break;
 		}
 		
 		printf("\n");
@@ -95,6 +95,7 @@ int main(void)
 			printf("\n");	
 			continue; // Program keeps running.
 		}
+
 	}
 	
 	return 0;
