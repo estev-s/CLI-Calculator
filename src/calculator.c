@@ -22,6 +22,7 @@ Author:
 
 
 // Functions
+int clean_buffer();
 void sum(void);
 void sub(void);
 void multi(void);
@@ -33,13 +34,21 @@ void sqroot(void);
 // --- Main ---
 int main(void)
 {
-	printf("Hi! I'm the calculator!\nDo you want to calculate? (Y/N) ");
+	
 	char confirmation;
-	scanf("%s", &confirmation);
+	do {
+		printf("Hi! I'm the calculator!\nDo you want to calculate? (Y/N) ");
+		scanf("%s", &confirmation);
+		
+		if (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n')
+			
+			printf("Invalid answer, try again...\n");
+
+	} while (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n');
 
 	if (confirmation == 'N' || confirmation == 'n')
 
-		printf("Alright, goodbye.\n");
+		printf("Alright, good bye.\n");
     
 	while (confirmation == 'Y' || confirmation == 'y') {
 
@@ -51,49 +60,52 @@ int main(void)
 		switch (operation) {
 
 		case 1:
-			// runs sum function
 			sum();
 			break;
 
 		case 2:
-			// runs sub function
 			sub();
 			break;
 			
 		case 3:
-			// runs multiplication function
 			multi();
 			break;
 
 		case 4:
-			// runs division function
 			div();
 			break;
 
 		case 5:
-			// runs power function				
 			power();
 			break;
 
 		case 6:
-			// runs sqroot function
 			sqroot();
 			break;
 		}
-		
-		printf("\n");
-		printf("Do you want to calculate more? (Y/N) ");
-		scanf("%s", &confirmation);
+
+		do {
+			printf("\n");
+			printf("Do you want to calculate more? (Y/N) ");
+			scanf("%s", &confirmation);
+
+			if (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n')
+				
+				printf("Invalid answer, try again...\n");
+			
+		} while (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n');
+
 		
 		if (confirmation == 'N' || confirmation == 'n') {
 			
 			printf("Alright, goodbye.\n");
-			break; // Break loop and exit program.
+			break; // exit loop.
 		}
 		
 		if (confirmation == 'Y' || confirmation == 'y') {
+			
 			printf("\n");	
-			continue; // Program keeps running.
+			continue; // go straight to the beginning of loop.
 		}
 
 	}
@@ -105,6 +117,14 @@ int main(void)
 
 // Functions Logic:
 
+int clean_buffer()
+{
+	/* This makes sure no buffer overflow happens when doing printf/scanf.
+	 * Also, enables for strict user answers to prompts.
+	 * Must be called after every scanf function. */
+
+
+}
 void sum(void)
 {
 
