@@ -20,6 +20,6 @@ If you're on Linux, you can just clone the repository with git and build.
         make
         git
 
-***NOTE:*** *this readme applies to both branches (main / linux-kernel-style)*
+***NOTE:*** *this readme applies to both branches (master / linux-kernel-style)*
 
 **Thank You!**
