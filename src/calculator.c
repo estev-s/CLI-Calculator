@@ -22,7 +22,6 @@ Author:
 
 
 // Functions
-int clean_buffer();
 void sum(void);
 void sub(void);
 void multi(void);
@@ -35,10 +34,12 @@ void sqroot(void);
 int main(void)
 {
 	
+	char input[5];
 	char confirmation;
 	do {
 		printf("Hi! I'm the calculator!\nDo you want to calculate? (Y/N) ");
-		scanf("%s", &confirmation);
+		fgets(input, sizeof(input), stdin);
+		sscanf(input, " %c", &confirmation); // " %c" more prone to user typos.
 		
 		if (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n')
 			
@@ -52,10 +53,22 @@ int main(void)
     
 	while (confirmation == 'Y' || confirmation == 'y') {
 
-		printf("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
-		int operation;
-		printf("Choose your operation number: ");
-		scanf("%i", &operation);
+		do {
+
+			char number[3];
+			int operation;	
+			printf("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
+			printf("Choose your operation number: ");
+			fgets(number, sizeof(number), stdin);
+			sscanf(number,"%i", &operation);
+			
+			if (operation != 1 && operation != 2 && operation != 3 && operation != 4 && operation != 5
+				&& operation != 6)
+
+				printf("Invalid answer, try again...\n");	
+
+		} while (operation != 1 && operation != 2 && operation != 3 && operation != 4 && operation != 5
+				&& operation != 6);
 
 		switch (operation) {
 
@@ -87,7 +100,8 @@ int main(void)
 		do {
 			printf("\n");
 			printf("Do you want to calculate more? (Y/N) ");
-			scanf("%s", &confirmation);
+			fgets(input, sizeof(input), stdin);
+			sscanf(input, " %c", &confirmation);
 
 			if (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n')
 				
@@ -116,25 +130,23 @@ int main(void)
 
 
 // Functions Logic:
-
-int clean_buffer()
-{
-	/* This makes sure no buffer overflow happens when doing printf/scanf.
-	 * Also, enables for strict user answers to prompts.
-	 * Must be called after every scanf function. */
-
-
-}
 void sum(void)
 {
 
-	float x, y, z;
+	char num1[100], num2[100];
+	double x, y, z;
 	printf("First number: ");
-	scanf("%f", &x);
+	fgets(num1, sizeof(num1), stdin);
+	sscanf(num1, "%lf", &x);
+	
 	printf("Second number: ");
-	scanf("%f", &y);
+	fgets(num2, sizeof(num2), stdin);
+	sscanf(num2, "%lf", &y);
+	
 	z = x + y;
 	printf("Result: "), printf("%.2f", z);
+	
+	
 
 }
 
