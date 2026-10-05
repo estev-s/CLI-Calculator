@@ -38,16 +38,19 @@ int main(void)
 	char confirmation = '\0';
 	
 	do {
-		printf("Hi! I'm the calculator!\nDo you want to calculate? (Y/N) ");
+		printf("Hi! I'm the calculator!
+			\nDo you want to calculate? (Y/N) ");
 		fgets(input, sizeof(input), stdin);
 		sscanf(input, " %c", &confirmation); // " %c" more prone to user typos.
 		
-		if (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n')
+		if (confirmation != 'Y' && confirmation != 'N' 
+			&& confirmation != 'y' && confirmation != 'n')
 
 			printf("Invalid answer, try again...\n");
 			
 
-	} while (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' && confirmation != 'n');
+	} while (confirmation != 'Y' && confirmation != 'N' 
+			&& confirmation != 'y' && confirmation != 'n');
 
 	if (confirmation == 'N' || confirmation == 'n')
 
@@ -60,17 +63,26 @@ int main(void)
 		
 		do {
 
-			printf("Operations:\n1. + \n2. - \n3. * \n4. / \n5. ^\n6. Sqroot\n \n");
+			printf("Operations:\n1. + 
+					\n2. - 
+					\n3. * 
+					\n4. / 
+					\n5. ^
+					\n6. Sqroot
+					\n \n");
+
 			printf("Choose your operation number: ");
 			fgets(number, sizeof(number), stdin);
 			sscanf(number,"%i", &operation);
 			
-			if (operation != 1 && operation != 2 && operation != 3 && operation != 4 
-					&& operation != 5 && operation != 6)
+			if (operation != 1 && operation != 2 
+				&& operation != 3 && operation != 4 
+				&& operation != 5 && operation != 6)
 
 				printf("Invalid answer, try again...\n");	
 
-		} while (operation != 1 && operation != 2 && operation != 3 && operation != 4 
+		} while (operation != 1 && operation != 2 
+				&& operation != 3 && operation != 4 
 				&& operation != 5 && operation != 6);
 
 		switch (operation) {
@@ -106,13 +118,13 @@ int main(void)
 			fgets(input, sizeof(input), stdin);
 			sscanf(input, " %c", &confirmation);
 
-			if (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' 
-					&& confirmation != 'n')
+			if (confirmation != 'Y' && confirmation != 'N' 
+				&& confirmation != 'y' && confirmation != 'n')
 				
 				printf("Invalid answer, try again...\n");
 			
-		} while (confirmation != 'Y' && confirmation != 'N' && confirmation != 'y' 
-				&& confirmation != 'n');
+		} while (confirmation != 'Y' && confirmation != 'N' 
+				&& confirmation != 'y' && confirmation != 'n');
 
 		
 		if (confirmation == 'N' || confirmation == 'n') {
