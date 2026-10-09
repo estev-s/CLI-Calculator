@@ -1,7 +1,25 @@
-﻿**Not Stable Branch**
+﻿When learning a language for the first time I always like to start with a calculator to get a hang of the basics and syntax.
 
-Improving the code while learning Linux kernel coding style.
+This is a simple CLI Calculator.
 
-It's being used to correct style, refactoring and/or adding/changing features.
+**macOS/Windows**
 
-This merges with 'master' branch whenever is suited.
+Copy (src/calculator.c) and compile it to run on your OS.
+
+**Linux**
+
+If you're on Linux, you can just clone the repository with git and build.
+
+    - Building:
+
+        inside terminal run: make calculator
+
+    - Dependencies:
+
+        gcc
+        make
+        git
+
+***NOTE:*** *this readme applies to both branches (master / linux-kernel-style)*
+
+**Thank You!**
