@@ -2,9 +2,35 @@
 
 This is a simple CLI Calculator.
 
-**macOS/Windows**
+**Windows**
 
-Copy (src/calculator.c) and compile it to run on your OS.
+If you're on Windows, you can just clone the repository with git and build.
+
+    - Building:
+
+        Inside terminal run: 'build calculator'
+
+    - Dependencies:
+
+        MSVC compiler
+        CMake
+        Git
+
+**macOS**
+
+If you're on macOS, you can just clone the repository with git and build.
+
+    - Building:
+
+        Inside terminal run: 'build calculator'
+
+    - Dependencies:
+
+        Clang compiler
+        CMake
+        Git
+
+
 
 **Linux**
 
@@ -12,14 +38,16 @@ If you're on Linux, you can just clone the repository with git and build.
 
     - Building:
 
-        inside terminal run: make calculator
+        Inside terminal run: 'build calculator'
 
     - Dependencies:
 
-        gcc
-        make
-        git
+        GCC compiler
+        Make
+        CMake
+        Git
 
-***NOTE:*** *this readme applies to both branches (master / linux-kernel-style)*
+***NOTES:***
+*I'm using the Linux kernel coding style*
 
 **Thank You!**
