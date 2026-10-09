@@ -1,7 +1,7 @@
-﻿**This branch is not for merging.**
+﻿**Not Stable Branch**
 
-Improving the code and learning Linux kernel coding style.
+Improving the code while learning Linux kernel coding style.
 
-The master's readme.md instructions applies to this branch, but, this is not a "stable" branch.
+It's being used to correct style, refactoring and/or adding/changing features.
 
-It's being used to learn the style format and to perform refactoring.
+This merges with 'master' branch whenever is suited.
